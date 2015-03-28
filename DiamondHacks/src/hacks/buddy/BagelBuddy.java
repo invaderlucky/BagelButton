@@ -66,6 +66,10 @@ public class BagelBuddy {
 
     if(fav == 'y' || fav == 'Y') {
         System.out.println("Enter rating from 1 to 5: ");
+        while (!console.hasNextInt()) {
+            console.next();
+            System.out.println("Invalid input. Enter rating from 1 to 5: ");
+        }
         rating = console.nextInt();
         System.out.println("Enter special name for your bagel: ");
         name = console.next();
