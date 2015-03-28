@@ -5,7 +5,7 @@ import java.util.*;
 public class BagelBuddy {
 
   public static final int NO_OF_BAGELS = 16;
-  public static final int NO_OF_CREAM_CHEESE = 8;
+  public static final int NO_OF_CREAM_CHEESE = 10;
   public static final int NO_OF_COMMENTS = 4;
 
   public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class BagelBuddy {
 
     String[] creamCheeseList = {"Plain", "Garden Veggie", "Honey Walnut",
                                  "Jalapeno", "Light Herb Garlic", "Olive Pimiento",
-                                 "Onion & Chive", "Strawberry"};
+                                 "Onion & Chive", "Strawberry", "Bacon Scallion", "Smoked Salmon"};
 
     char satisfied = 'n';
 
