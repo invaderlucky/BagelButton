@@ -11,6 +11,8 @@ public class BagelBuddy {
   public static void main(String[] args) {
     Scanner console = new Scanner(System.in);
 
+    ArrayList<Favorite> favArray = new ArrayList<Favorite>();
+
     String[] bagelList = {"Asiago Parmesan", "Cinnamon Sugar", "Garlic",
                            "Onion", "Poppy", "Rosemary Olive Oil", "Sesame",
                            "Sundried Tomato", "Blueberry", "Cinnamon Raisin",
@@ -22,6 +24,12 @@ public class BagelBuddy {
                                  "Onion & Chive", "Strawberry", "Bacon Scallion", "Smoked Salmon"};
 
     char satisfied = 'n';
+    String answer;
+    char fav;
+    String bagelOfChoice = "";
+    String creamCheeseOfChoice = "";
+    int rating;
+    String name;
 
     while(satisfied == 'n' || satisfied == 'N') {
       Random rand = new Random();
@@ -30,8 +38,8 @@ public class BagelBuddy {
       int creamCheese = rand.nextInt(NO_OF_CREAM_CHEESE);
       int comment = rand.nextInt(NO_OF_COMMENTS) + 1;
 
-      String bagelOfChoice = bagelList[bagel];
-      String creamCheeseOfChoice = creamCheeseList[creamCheese];
+      bagelOfChoice = bagelList[bagel];
+      creamCheeseOfChoice = creamCheeseList[creamCheese];
 
       System.out.println();
 
@@ -48,9 +56,20 @@ public class BagelBuddy {
       }
 
       System.out.println("\nAre you happy now? (y/n) ");
-      String answer = console.next();
+      answer = console.next();
 
       satisfied = answer.charAt(0);
+    }
+
+    System.out.println("Do you want to add this bagel to your favorites? (y/n) ");
+    fav = console.next().charAt(0);
+
+    if(fav == 'y' || fav == 'Y') {
+        System.out.println("Enter rating from 1 to 5: ");
+        rating = console.nextInt();
+        System.out.println("Enter special name for your bagel: ");
+        name = console.next();
+        favArray.add(new Favorite(bagelOfChoice, creamCheeseOfChoice, rating, name));
     }
 
     System.out.println("\nWell, I hope your bagel isn't as cold as your heart or as gross as your poop.\n");
