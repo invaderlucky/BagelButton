@@ -42,7 +42,7 @@ public class BagelBuddy {
                 break;
         case 3: System.out.printf("If you haven't tried %s and %s, you're not living life, man!\n", bagelOfChoice, creamCheeseOfChoice);
                 break;
-        case 4: System.out.printf("Dude, where's my %s and %s?", bagelOfChoice, creamCheeseOfChoice);
+        case 4: System.out.printf("Dude, where's my %s and %s?\n", bagelOfChoice, creamCheeseOfChoice);
                 break;
         default: System.out.print("You shouldn't be here!\n");
       }
