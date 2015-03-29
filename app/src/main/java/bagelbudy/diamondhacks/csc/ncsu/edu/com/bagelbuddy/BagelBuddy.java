@@ -59,7 +59,16 @@ public class BagelBuddy {
         return currentBagel;
     }
 
-    public void addToFavorites(int rating, String name) {
-        favorites.add(new Favorite(currentBagel, currentCreamCheese, rating, name));
+    public boolean addToFavorites(int rating, String name) {
+        Favorite fav = new Favorite(currentBagel, currentCreamCheese, rating, name);
+        for (int i = 0; i < favorites.size(); i++) {
+            if (fav.getBagel().equals(favorites.get(i).getBagel()) &&
+                fav.getCreamCheese().equals(favorites.get(i).getCreamCheese())) {
+                favorites.get(i).setRating(fav.getRating());
+                favorites.get(i).setName(fav.getName());
+                return true;
+            }
+        }
+        return favorites.add(fav);
     }
 }
