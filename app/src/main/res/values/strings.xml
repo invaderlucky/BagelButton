@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">BagelButton</string>
-
+    <string name="app_name">Bagel Button</string>
     <string name="action_settings">Settings</string>
 </resources>
