@@ -26,7 +26,8 @@
             android:layout_gravity="center"
             android:clickable="true"
             android:numStars="5"
-            android:rating="0"/>
+            android:rating="0"
+            android:stepSize="1.0"/>
 
         <TextView
             android:layout_width="250dp"
@@ -38,6 +39,17 @@
             android:textAlignment="center"
             android:textColor="#ff00ebff"
             android:textSize="35dp"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="298dp"
+            android:layout_height="69dp"
+            android:text="Add to Favorites"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal|bottom"
+            android:textSize="30sp"
+            android:textColor="#ff050331"
+            android:background="#ff3ed0ff"
             android:gravity="center" />
 
     </FrameLayout>
