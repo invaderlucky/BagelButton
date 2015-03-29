@@ -43,14 +43,16 @@
 
         <RatingBar
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="49dp"
             android:id="@+id/ratingBar"
-            android:layout_gravity="center_horizontal|top"
+            android:layout_gravity="center|top"
+            android:background="#ff3ed0ff"
             android:clickable="true"
             android:numStars="5"
             android:rating="0"
             android:stepSize="1.0"
-            android:paddingTop="100dp" />
+            android:layout_marginTop="100dp"/>
+            <!--android:paddingTop="100dp" />-->
 
         <TextView
             android:layout_width="337dp"
