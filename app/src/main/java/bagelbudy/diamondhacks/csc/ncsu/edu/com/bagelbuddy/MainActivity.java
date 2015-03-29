@@ -175,7 +175,17 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void showDislikes(View v) {
-
+        // move to dislikes list screen
+        setContentView(R.layout.activity_dislikes);
+        ArrayList<Favorite> dislikeList = app.getDislikeList();
+        ArrayList<String> data = new ArrayList<String>();
+        ListView list = (ListView) findViewById(R.id.listView);
+        for(int i = 0; i < dislikeList.size(); i++) {
+            data.add(dislikeList.get(i).getName());
+        }
+        ArrayAdapter<String> adapter;
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        list.setAdapter(adapter);
     }
 
     @Override
@@ -195,24 +205,11 @@ public class MainActivity extends ActionBarActivity {
         switch (id) {
             case R.id.action_favorites:
                 b = (Button) findViewById(R.id.action_favorites);
-               // b.setOnClickListener(
-                        //new Button.OnClickListener() {
-                          //  public void onClick(View v) {
-                                showFavorites(null);
-                            //}
-                        //}
-               // );
+                showFavorites(null);
                 return true;
             case R.id.action_dislike:
                 b = (Button) findViewById(R.id.action_dislike);
-                b.setOnClickListener(
-                        new Button.OnClickListener() {
-                            public void onClick(View v) {
-                                showDislikes(v);
-                            }
-                        }
-                );
-                return true;
+                showDislikes(null);
             default:
                 return super.onOptionsItemSelected(item);
         }
