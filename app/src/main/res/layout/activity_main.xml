@@ -11,7 +11,23 @@
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#d3000414">
+        android:background="#d3000414"
+        android:id="@+id/">
+
+        <Button
+            android:layout_width="225dp"
+            android:layout_height="76dp"
+            android:text="Get a bagel!"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#ff3ed0ff"
+            android:backgroundTintMode="src_over"
+            android:capitalize="sentences"
+            android:enabled="false"
+            android:textColor="#ff050331"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:elegantTextHeight="false" />
 
         <TextView
             android:layout_width="208dp"
