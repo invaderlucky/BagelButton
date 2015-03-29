@@ -20,8 +20,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Load main screen
         setContentView(R.layout.activity_main);
 
+        // action listener for Get Bagel button
         Button b = (Button) findViewById(R.id.myButton);
         b.setOnClickListener(
             new Button.OnClickListener() {
@@ -33,9 +36,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void showBagel(View view) {
+        // move to next screen
         setContentView(R.layout.activity_second);
+
+        // print chosen bagel
         TextView text = (TextView) findViewById(R.id.textViewBagel);
         text.setText(app.printResult());
+
+        // get the image for the chosen bagel
         String currentBagel = app.getCurrentBagel();
         ImageView image = (ImageView)findViewById(R.id.imageView);
         if(currentBagel.equals("Asiago Parmesan")) { image.setImageResource(R.mipmap.asiagoparm); }
@@ -54,6 +62,8 @@ public class MainActivity extends ActionBarActivity {
         else if(currentBagel.equals("Cinnamon Raisin")) { image.setImageResource(R.mipmap.cinnamonraison); }
         else if(currentBagel.equals("Everything")) { image.setImageResource(R.mipmap.everything); }
         else if(currentBagel.equals("Sundried Tomato")) { image.setImageResource(R.mipmap.sundriedtomato); }
+
+        // action listener for No button
         Button b = (Button) findViewById(R.id.buttonNo);
         b.setOnClickListener(
             new Button.OnClickListener() {
@@ -63,6 +73,7 @@ public class MainActivity extends ActionBarActivity {
             }
         );
 
+        // action listener for Yes button
         b = (Button) findViewById(R.id.buttonYes);
         b.setOnClickListener(
             new Button.OnClickListener() {
