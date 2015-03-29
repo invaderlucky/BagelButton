@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-1577e770286a51727a5e36dba8cb5fe672b6ca78.jar" />
-    </item>
-    <item
-        jar="D:\Users\Rebecca\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-a105077285ea603a468e849aa2b89003241f7353.jar" />
-    </item>
-    <item
-        jar="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jar="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\pre-dexed\debug\classes-36937e6e81a9307d3dc3229790b7c4464b0f05b7.jar" />
+        <dex dex="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\pre-dexed\debug\classes-858addac62ad6737e57f6f8db1a04ef57bb3bf6c.jar" />
     </item>
     <item
-        jar="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jar="C:\Users\Lucky\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-1956b90e883bcee5f88cf8c7c0065ad69374d760.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="D:\Users\Rebecca\Documents\GitHub\BagelBuddy\app\build\intermediates\pre-dexed\debug\classes-961abf73a7e90e231bf273a074e00b2d600d2d77.jar" />
+        <dex dex="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\pre-dexed\debug\classes-3e7bf249b009f672e47a08d433c4b15b55915420.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Lucky\Documents\GitHub\BagelBuddy\BagelBuddy\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-9b60ca907757d33906002b194455d683ff959ff8.jar" />
     </item>
 
 </items>
