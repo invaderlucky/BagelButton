@@ -85,7 +85,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void showRate(View view) {
-       // setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_third);
     }
 
     @Override
