@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -104,10 +105,12 @@ public class MainActivity extends ActionBarActivity {
     public void addToFavorites(View v) {
         // Add bagel to favorites
         RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-        app.addToFavorites((int) ratingBar.getRating(), "Name");
+        EditText bagelName = (EditText) findViewById(R.id.textBagelName);
+        app.addToFavorites((int) ratingBar.getRating(), bagelName.getText().toString());
 
         // Print success message
-
+        TextView text = (TextView) findViewById(R.id.successMsg);
+        text.setText("Added Successfully");
     }
 
     @Override
