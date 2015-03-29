@@ -15,15 +15,12 @@ public class MainActivity extends ActionBarActivity {
 
     private static BagelBuddy app = new BagelBuddy();
 
-    Button b1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button b = (Button) findViewById(R.id.myButton);
-
         b.setOnClickListener(
             new Button.OnClickListener() {
                 public void onClick(View v) {
@@ -38,6 +35,28 @@ public class MainActivity extends ActionBarActivity {
         TextView text = (TextView) findViewById(R.id.textViewBagel);
         text.setText(app.printOutput());
         //System.out.println(app.printOutput());
+
+        Button b = (Button) findViewById(R.id.buttonNo);
+        b.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        showBagel(v);
+                    }
+                }
+        );
+
+        b = (Button) findViewById(R.id.buttonYes);
+        b.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        showRate(v);
+                    }
+                }
+        );
+    }
+
+    public void showRate(View view) {
+        setContentView(R.layout.activity_third);
     }
 
     @Override
