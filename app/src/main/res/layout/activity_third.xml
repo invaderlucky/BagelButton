@@ -89,8 +89,9 @@
             android:textAlignment="center"
             android:textSize="30dp"
             android:gravity="center_horizontal"
-            android:paddingTop="200dp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:paddingTop="250dp" />
 
     </FrameLayout>
 </RelativeLayout>
