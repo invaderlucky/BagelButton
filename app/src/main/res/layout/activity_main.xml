@@ -11,8 +11,7 @@
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#d3000414"
-        android:id="@+id/">
+        android:background="#d3000414">
 
         <Button
             android:layout_width="225dp"
@@ -27,6 +26,7 @@
             android:textColor="#ff050331"
             android:textSize="30sp"
             android:clickable="true"
+            android:onClick="showBagel"
             android:elegantTextHeight="false" />
 
         <TextView
