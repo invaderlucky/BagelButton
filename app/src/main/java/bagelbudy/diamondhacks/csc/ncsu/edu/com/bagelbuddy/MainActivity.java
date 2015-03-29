@@ -49,6 +49,12 @@ public class MainActivity extends ActionBarActivity {
         else if(output.contains("Salt")) { image.setImageResource(R.mipmap.salt); }
         else if(output.contains("Sesame")) { image.setImageResource(R.mipmap.sesame); }
         else if(output.contains("Whole Wheat")) { image.setImageResource(R.mipmap.wholewheat); }
+        else if(output.contains("Plain")) { image.setImageResource(R.mipmap.plain); }
+        else if(output.contains("Honey Grain")) { image.setImageResource(R.mipmap.honeygrain); }
+        else if(output.contains("Blueberry")) { image.setImageResource(R.mipmap.blueberry); }
+        else if(output.contains("Pumpernickel")) { image.setImageResource(R.mipmap.pumpernickel); }
+        else if(output.contains("Cinnamon Raisin")) { image.setImageResource(R.mipmap.cinnamonraison); }
+        else if(output.contains("Everything")) { image.setImageResource(R.mipmap.everything); }
         Button b = (Button) findViewById(R.id.buttonNo);
         b.setOnClickListener(
             new Button.OnClickListener() {
