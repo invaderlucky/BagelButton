@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import bagelbudy2.diamondhacks.csc.ncsu.edu.com.bagelbuddy.R;
@@ -35,8 +34,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void showBagel(View view) {
-        // add BagelBuddy stuff things
         setContentView(R.layout.activity_second);
+        TextView text = (TextView) findViewById(R.id.textViewBagel);
+        text.setText(app.printOutput());
+        //System.out.println(app.printOutput());
     }
 
     @Override

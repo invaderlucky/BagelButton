@@ -15,6 +15,16 @@
         android:background="#d3000414"
         android:id="@+id/frameLayout">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewBagel"
+            android:layout_gravity="center_horizontal|top"
+            android:textColor="#ff00ebff"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
         <Button
             android:layout_width="104dp"
             android:layout_height="76dp"
@@ -59,13 +69,6 @@
             android:textAlignment="center"
             android:textColor="#ff00ebff"
             android:textSize="35dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="121dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewBagel"
-            android:layout_gravity="center_horizontal|top" />
 
     </FrameLayout>
 </RelativeLayout>

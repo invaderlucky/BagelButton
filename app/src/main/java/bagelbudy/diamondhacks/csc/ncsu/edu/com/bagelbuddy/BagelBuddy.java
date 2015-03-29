@@ -1,5 +1,7 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
+import android.util.Log;
+
 import java.util.Random;
 
 public class BagelBuddy {
@@ -30,14 +32,19 @@ public class BagelBuddy {
 
         switch (comment) {
             case 1:
-                return "Don't miss the delightful creation that is %s and %s!\n" + bagelOfChoice + creamCheeseOfChoice;
+                //Log.d("here", "Don't miss the delightful creation that is " + bagelOfChoice + " and " + creamCheeseOfChoice + "!\n");
+                return "Don't miss the delightful creation that is " + bagelOfChoice + " and " + creamCheeseOfChoice + "!\n";
             case 2:
-                return "You have got to eat %s and %s!\n" + bagelOfChoice + creamCheeseOfChoice;
+                //Log.d("here", "You have got to eat " + bagelOfChoice + " and " + creamCheeseOfChoice + "!\n");
+                return "You have got to eat " + bagelOfChoice + " and " + creamCheeseOfChoice + "!\n";
             case 3:
-                return "If you haven't tried %s and %s, you're not living life, man!\n" + bagelOfChoice + creamCheeseOfChoice;
+                //Log.d("here", "If you haven't tried " + bagelOfChoice + " and " + creamCheeseOfChoice + ", you're not living life, man!\n");
+                return "If you haven't tried " + bagelOfChoice + " and " + creamCheeseOfChoice + ", you're not living life, man!\n";
             case 4:
-                return "Dude, where's my %s and %s?\n" + bagelOfChoice + creamCheeseOfChoice;
+                //Log.d("here", "Dude, where's my " + bagelOfChoice + " and " + creamCheeseOfChoice + "?\n");
+                return "Dude, where's my " + bagelOfChoice + " and " + creamCheeseOfChoice + "?\n";
             default:
+                //Log.d("here", "You shouldn't be here!\n");
                 return "You shouldn't be here!\n";
         }
     }
