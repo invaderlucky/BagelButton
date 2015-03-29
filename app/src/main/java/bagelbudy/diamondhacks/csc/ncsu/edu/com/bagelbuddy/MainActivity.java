@@ -195,13 +195,13 @@ public class MainActivity extends ActionBarActivity {
         switch (id) {
             case R.id.action_favorites:
                 b = (Button) findViewById(R.id.action_favorites);
-                b.setOnClickListener(
-                        new Button.OnClickListener() {
-                            public void onClick(View v) {
-                                showFavorites(v);
-                            }
-                        }
-                );
+               // b.setOnClickListener(
+                        //new Button.OnClickListener() {
+                          //  public void onClick(View v) {
+                                showFavorites(null);
+                            //}
+                        //}
+               // );
                 return true;
             case R.id.action_dislike:
                 b = (Button) findViewById(R.id.action_dislike);
