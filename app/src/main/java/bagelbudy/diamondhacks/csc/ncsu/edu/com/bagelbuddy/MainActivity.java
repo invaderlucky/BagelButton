@@ -1,5 +1,6 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
+import android.app.ListActivity;
 import android.media.Rating;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
@@ -8,9 +9,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.SimpleCursorAdapter;
@@ -158,26 +161,17 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void showFavorites(View v) {
-        // move to favourites list screen
+        // move to favorites list screen
         setContentView(R.layout.activity_favorites);
-
-
-        /*
-        // For the cursor adapter, specify which columns go into which views
-        String[] fromColumns = {ContactsContract.Data.DISPLAY_NAME};
-        int[] toViews = {android.R.id.text1}; // The TextView in simple_list_item_1
-
-        // Create an empty adapter we will use to display the loaded data.
-        // We pass null for the cursor, then update it in onLoadFinished()
-        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this,
-                android.R.layout.simple_list_item_1, null,
-                fromColumns, toViews, 0);
-        setListAdapter(mAdapter);
-
-        // Prepare the loader.  Either re-connect with an existing one,
-        // or start a new one.
-        getLoaderManager().initLoader(0, null, this);*/
-
+        ArrayList<Favorite> favList = app.getFavorites();
+        ArrayList<String> data = new ArrayList<String>();
+        ListView list = (ListView) findViewById(R.id.listView);
+        for(int i = 0; i < favList.size(); i++) {
+            data.add(favList.get(i).getName());
+        }
+        ArrayAdapter<String> adapter;
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        list.setAdapter(adapter);
     }
 
     public void showDislikes(View v) {
