@@ -47,7 +47,7 @@
             android:layout_width="192dp"
             android:layout_height="78dp"
             android:text="Get a new bagel"
-            android:id="@+id/newButton"
+            android:id="@+id/newBagel"
             android:layout_gravity="center"
             android:textColor="#ff050331"
             android:background="#ff3ed0ff"
@@ -68,7 +68,7 @@
             android:gravity="center_horizontal"
             android:textStyle="italic"
             android:layout_gravity="center"
-            android:paddingTop="250dp" />
+            android:paddingTop="350dp" />
 
     </FrameLayout>
 </RelativeLayout>
