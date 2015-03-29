@@ -1,5 +1,6 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
+import android.media.Rating;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import bagelbudy2.diamondhacks.csc.ncsu.edu.com.bagelbuddy.R;
@@ -85,7 +87,27 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void showRate(View view) {
+        // move to next screen
         setContentView(R.layout.activity_third);
+
+        // action listener for Add to Favorites button
+        Button b = (Button) findViewById(R.id.favButton);
+        b.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        addToFavorites(v);
+                    }
+                }
+        );
+    }
+
+    public void addToFavorites(View v) {
+        // Add bagel to favorites
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        app.addToFavorites((int) ratingBar.getRating(), "Name");
+
+        // Print success message
+
     }
 
     @Override

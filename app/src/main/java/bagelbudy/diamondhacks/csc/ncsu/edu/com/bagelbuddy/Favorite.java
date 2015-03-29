@@ -9,11 +9,11 @@ public class Favorite {
     private String bagel;
     private String creamCheese;
 
-    public Favorite (String b, String c, int r, String n) {
-        bagel = b;
-        creamCheese = c;
-        rating = r;
-        name = n;
+    public Favorite (String bagel, String creamCheese, int rating, String name) {
+        this.bagel = bagel;
+        this.creamCheese = creamCheese;
+        this.rating = rating;
+        this.name = name;
     }
 
     public int getRating () {

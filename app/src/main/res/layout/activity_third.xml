@@ -36,7 +36,7 @@
             android:layout_width="298dp"
             android:layout_height="69dp"
             android:text="Add to Favorites"
-            android:id="@+id/button"
+            android:id="@+id/favButton"
             android:layout_gravity="center_horizontal|bottom"
             android:textSize="30sp"
             android:textColor="#ff050331"
