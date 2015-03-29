@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
         b.setOnClickListener(
             new Button.OnClickListener() {
                 public void onClick(View v) {
-                    showBagel(v);
+                    handleDislike(v);
                 }
             }
         );
@@ -97,6 +97,40 @@ public class MainActivity extends ActionBarActivity {
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         addToFavorites(v);
+                    }
+                }
+        );
+    }
+
+    public void handleDislike(View v) {
+        // move to next screen
+        setContentView(R.layout.activity_fourth);
+
+        // action listener for Add to Dislike list
+        Button b = (Button) findViewById(R.id.dislikeButton);
+        b.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        boolean added = app.addToDislikeList();
+
+                        // Print success message
+                        if (added) {
+                            TextView text = (TextView) findViewById(R.id.dislikeSuccess);
+                            text.setText("Added Successfully");
+                        } else {
+                            TextView text = (TextView) findViewById(R.id.dislikeSuccess);
+                            text.setText("Bagel Not Added");
+                        }
+                    }
+                }
+        );
+
+        // action listener for generate new bagel
+        b = (Button) findViewById(R.id.newBagel);
+        b.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        showBagel(v);
                     }
                 }
         );
