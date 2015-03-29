@@ -61,14 +61,21 @@
 
         <TextView
             android:layout_width="250dp"
-            android:layout_height="93dp"
+            android:layout_height="193dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Are you happy with this bagel?"
             android:id="@+id/textViewQuestion"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal|bottom"
             android:textAlignment="center"
             android:textColor="#ff00ebff"
             android:textSize="35dp" />
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="241dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center"
+            android:src="@mipmap/asiagoparm" />
 
     </FrameLayout>
 </RelativeLayout>
