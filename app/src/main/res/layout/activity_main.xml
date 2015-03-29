@@ -23,8 +23,7 @@
             android:backgroundTintMode="src_over"
             android:textColor="#ff050331"
             android:textSize="30sp"
-            android:elegantTextHeight="false"
-            android:onClick="showBagel" />
+            android:elegantTextHeight="false" />
 
         <TextView
             android:layout_width="208dp"
@@ -35,7 +34,8 @@
             android:layout_gravity="center_horizontal|top"
             android:textAlignment="center"
             android:textColor="#ff00ebff"
-            android:textSize="35dp" />
+            android:textSize="35dp"
+            android:gravity="center" />
 
     </FrameLayout>
 </RelativeLayout>

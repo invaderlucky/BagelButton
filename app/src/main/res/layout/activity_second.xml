@@ -23,7 +23,8 @@
             android:layout_gravity="center_horizontal|top"
             android:textColor="#ff00ebff"
             android:textAlignment="center"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:gravity="center_horizontal" />
 
         <Button
             android:layout_width="104dp"
@@ -33,12 +34,8 @@
             android:layout_gravity="left|bottom"
             android:background="#ff3ed0ff"
             android:backgroundTintMode="src_over"
-            android:capitalize="sentences"
-            android:enabled="false"
             android:textColor="#ff050331"
             android:textSize="30sp"
-            android:clickable="true"
-            android:onClick="sendMessageYes"
             android:elegantTextHeight="false"
             style="?android:attr/borderlessButtonStyle" />
 
@@ -50,12 +47,8 @@
             android:layout_gravity="right|bottom"
             android:background="#ff3ed0ff"
             android:backgroundTintMode="src_over"
-            android:capitalize="sentences"
-            android:enabled="false"
             android:textColor="#ff050331"
             android:textSize="30sp"
-            android:clickable="true"
-            android:onClick="sendMessageNo"
             android:elegantTextHeight="false"
             style="?android:attr/borderlessButtonStyle" />
 
@@ -68,7 +61,8 @@
             android:layout_gravity="center_horizontal|bottom"
             android:textAlignment="center"
             android:textColor="#ff00ebff"
-            android:textSize="35dp" />
+            android:textSize="35dp"
+            android:gravity="center_horizontal" />
 
         <ImageView
             android:layout_width="160dp"
