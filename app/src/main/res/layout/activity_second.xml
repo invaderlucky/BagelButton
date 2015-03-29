@@ -37,7 +37,9 @@
             android:textColor="#ff050331"
             android:textSize="30sp"
             android:elegantTextHeight="false"
-            style="?android:attr/borderlessButtonStyle" />
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp" />
 
         <Button
             android:layout_width="104dp"
@@ -50,7 +52,9 @@
             android:textColor="#ff050331"
             android:textSize="30sp"
             android:elegantTextHeight="false"
-            style="?android:attr/borderlessButtonStyle" />
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:layout_width="250dp"

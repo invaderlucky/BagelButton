@@ -15,6 +15,7 @@ public class BagelBuddy {
     private String currentCreamCheese = "";
 
     private ArrayList<Favorite> favorites = new ArrayList<Favorite>();
+    private ArrayList<Favorite> dislikeList = new ArrayList<Favorite>();
 
     public String printResult() {
         String[] bagelList = {"Asiago Parmesan", "Cinnamon Sugar", "Garlic",
@@ -70,5 +71,24 @@ public class BagelBuddy {
             }
         }
         return favorites.add(fav);
+    }
+
+    public boolean addToDislikeList() {
+        Favorite fav = new Favorite(currentBagel, currentCreamCheese, 0, "");
+        for (int i = 0; i < dislikeList.size(); i++) {
+            if (fav.getBagel().equals(dislikeList.get(i).getBagel()) &&
+                    fav.getCreamCheese().equals(dislikeList.get(i).getCreamCheese())) {
+                return true;
+            }
+        }
+        return dislikeList.add(fav);
+    }
+
+    public ArrayList<Favorite> getFavorites() {
+        return favorites;
+    }
+
+    public ArrayList<Favorite> getDislikeList() {
+        return dislikeList;
     }
 }
