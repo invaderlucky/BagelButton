@@ -161,7 +161,6 @@ public class MainActivity extends ActionBarActivity {
         // move to favourites list screen
         setContentView(R.layout.activity_favorites);
 
-        ArrayList<String> data = app.get
 
         /*
         // For the cursor adapter, specify which columns go into which views
