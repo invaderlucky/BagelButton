@@ -28,7 +28,9 @@
             android:textColor="#ff050331"
             android:textSize="30sp"
             android:clickable="true"
-            android:elegantTextHeight="false" />
+            android:onClick="sendMessageYes"
+            android:elegantTextHeight="false"
+            style="?android:attr/borderlessButtonStyle" />
 
         <Button
             android:layout_width="104dp"
@@ -43,7 +45,9 @@
             android:textColor="#ff050331"
             android:textSize="30sp"
             android:clickable="true"
-            android:elegantTextHeight="false" />
+            android:onClick="sendMessageNo"
+            android:elegantTextHeight="false"
+            style="?android:attr/borderlessButtonStyle" />
 
         <TextView
             android:layout_width="250dp"
