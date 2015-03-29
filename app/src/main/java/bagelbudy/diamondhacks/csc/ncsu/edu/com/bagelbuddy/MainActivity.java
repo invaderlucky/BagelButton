@@ -106,11 +106,16 @@ public class MainActivity extends ActionBarActivity {
         // Add bagel to favorites
         RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         EditText bagelName = (EditText) findViewById(R.id.textBagelName);
-        app.addToFavorites((int) ratingBar.getRating(), bagelName.getText().toString());
+        boolean added = app.addToFavorites((int) ratingBar.getRating(), bagelName.getText().toString());
 
         // Print success message
-        TextView text = (TextView) findViewById(R.id.successMsg);
-        text.setText("Added Successfully");
+        if (added) {
+            TextView text = (TextView) findViewById(R.id.successMsg);
+            text.setText("Added Successfully");
+        } else {
+            TextView text = (TextView) findViewById(R.id.successMsg);
+            text.setText("Bagel Not Added");
+        }
     }
 
     @Override
