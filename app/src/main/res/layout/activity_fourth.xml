@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#d80b5c77">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#d3000414"
+        android:id="@+id/frameLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Would you like to add this to your dislikes?"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal|top"
+            android:textColor="#ff00ebff"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="192dp"
+            android:layout_height="78dp"
+            android:text="Add to Dislikes"
+            android:id="@+id/dislikeButton"
+            android:layout_gravity="center"
+            android:textColor="#ff050331"
+            android:background="#ff3ed0ff"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:paddingBottom="0dp"
+            android:layout_marginBottom="75dp" />
+
+        <Button
+            android:layout_width="192dp"
+            android:layout_height="78dp"
+            android:text="Get a new bagel"
+            android:id="@+id/newButton"
+            android:layout_gravity="center"
+            android:textColor="#ff050331"
+            android:background="#ff3ed0ff"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:paddingBottom="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/dislikeSuccess"
+            android:textColor="#ff00ebff"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:paddingTop="250dp" />
+
+    </FrameLayout>
+</RelativeLayout>
