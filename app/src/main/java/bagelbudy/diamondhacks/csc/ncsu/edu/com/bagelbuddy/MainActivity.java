@@ -2,6 +2,7 @@ package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,26 +35,25 @@ public class MainActivity extends ActionBarActivity {
     public void showBagel(View view) {
         setContentView(R.layout.activity_second);
         TextView text = (TextView) findViewById(R.id.textViewBagel);
-        String output = app.printResult();
-        text.setText(output);
-        //System.out.println(app.printOutput());
+        text.setText(app.printResult());
+        String currentBagel = app.getCurrentBagel();
         ImageView image = (ImageView)findViewById(R.id.imageView);
-        if(output.contains("Asiago Parmesan")) { image.setImageResource(R.mipmap.asiagoparm); }
-        else if(output.contains("Cinnamon Sugar")) { image.setImageResource(R.mipmap.cinnamonsugar); }
-        else if(output.contains("Garlic")) { image.setImageResource(R.mipmap.garlic); }
-        else if(output.contains("Onion")) { image.setImageResource(R.mipmap.onion); }
-        else if(output.contains("Poppy")) { image.setImageResource(R.mipmap.poppy); }
-        else if(output.contains("Rosemary Olive Oil")) { image.setImageResource(R.mipmap.roseoliveoil); }
-        else if(output.contains("Salt")) { image.setImageResource(R.mipmap.salt); }
-        else if(output.contains("Sesame")) { image.setImageResource(R.mipmap.sesame); }
-        else if(output.contains("Whole Wheat")) { image.setImageResource(R.mipmap.wholewheat); }
-        else if(output.contains("Pumpernickel")) { image.setImageResource(R.mipmap.pumpernickel); }
-        else if(output.contains("Plain")) { image.setImageResource(R.mipmap.plain); }
-        else if(output.contains("Honey Grain")) { image.setImageResource(R.mipmap.honeygrain); }
-        else if(output.contains("Blueberry")) { image.setImageResource(R.mipmap.blueberry); }
-        else if(output.contains("Cinnamon Raisin")) { image.setImageResource(R.mipmap.cinnamonraison); }
-        else if(output.contains("Everything")) { image.setImageResource(R.mipmap.everything); }
-        else if(output.contains("Sundried Tomato")) { image.setImageResource(R.mipmap.sundriedtomato); }
+        if(currentBagel.equals("Asiago Parmesan")) { image.setImageResource(R.mipmap.asiagoparm); }
+        else if(currentBagel.equals("Cinnamon Sugar")) { image.setImageResource(R.mipmap.cinnamonsugar); }
+        else if(currentBagel.equals("Garlic")) { image.setImageResource(R.mipmap.garlic); }
+        else if(currentBagel.equals("Onion")) { image.setImageResource(R.mipmap.onion); }
+        else if(currentBagel.equals("Poppy")) { image.setImageResource(R.mipmap.poppy); }
+        else if(currentBagel.equals("Rosemary Olive Oil")) { image.setImageResource(R.mipmap.roseoliveoil); }
+        else if(currentBagel.equals("Salt")) { image.setImageResource(R.mipmap.salt); }
+        else if(currentBagel.equals("Sesame")) { image.setImageResource(R.mipmap.sesame); }
+        else if(currentBagel.equals("Whole Wheat")) { image.setImageResource(R.mipmap.wholewheat); }
+        else if(currentBagel.equals("Pumpernickel")) { image.setImageResource(R.mipmap.pumpernickel); }
+        else if(currentBagel.equals("Plain")) { image.setImageResource(R.mipmap.plain); }
+        else if(currentBagel.equals("Honey Grain")) { image.setImageResource(R.mipmap.honeygrain); }
+        else if(currentBagel.equals("Blueberry")) { image.setImageResource(R.mipmap.blueberry); }
+        else if(currentBagel.equals("Cinnamon Raisin")) { image.setImageResource(R.mipmap.cinnamonraison); }
+        else if(currentBagel.equals("Everything")) { image.setImageResource(R.mipmap.everything); }
+        else if(currentBagel.equals("Sundried Tomato")) { image.setImageResource(R.mipmap.sundriedtomato); }
         Button b = (Button) findViewById(R.id.buttonNo);
         b.setOnClickListener(
             new Button.OnClickListener() {
