@@ -1,10 +1,10 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
+import java.util.*;
 
 public class BagelBuddy {
 
@@ -45,42 +45,42 @@ public class BagelBuddy {
             bagelOfChoice = bagelList[bagel];
             creamCheeseOfChoice = creamCheeseList[creamCheese];
 
-            Log.d();
+            System.out.println();
 
             switch(comment) {
-                case 1: Log.d("here", String("Don't miss the delightful creation that is %s and %s!\n", bagelOfChoice, creamCheeseOfChoice);
+                case 1: System.out.printf("Don't miss the delightful creation that is %s and %s!\n", bagelOfChoice, creamCheeseOfChoice);
                     break;
-                case 2: Log.d("You have got to eat %s and %s!\n", bagelOfChoice, creamCheeseOfChoice);
+                case 2: System.out.printf("You have got to eat %s and %s!\n", bagelOfChoice, creamCheeseOfChoice);
                     break;
-                case 3: Log.d("If you haven't tried %s and %s, you're not living life, man!\n", bagelOfChoice, creamCheeseOfChoice);
+                case 3: System.out.printf("If you haven't tried %s and %s, you're not living life, man!\n", bagelOfChoice, creamCheeseOfChoice);
                     break;
-                case 4: Log.d("Dude, where's my %s and %s?\n", bagelOfChoice, creamCheeseOfChoice);
+                case 4: System.out.printf("Dude, where's my %s and %s?\n", bagelOfChoice, creamCheeseOfChoice);
                     break;
                 default: System.out.print("You shouldn't be here!\n");
             }
 
-            Log.d("\nAre you happy now? (y/n) ");
+            System.out.println("\nAre you happy now? (y/n) ");
             answer = console.next();
 
             satisfied = answer.charAt(0);
         }
 
-        Log.d("Do you want to add this bagel to your favorites? (y/n) ");
+        System.out.println("Do you want to add this bagel to your favorites? (y/n) ");
         fav = console.next().charAt(0);
 
         if(fav == 'y' || fav == 'Y') {
-            Log.d("Enter rating from 1 to 5: ");
+            System.out.println("Enter rating from 1 to 5: ");
             while (!console.hasNextInt()) {
                 console.next();
-                Log.d("Invalid input. Enter rating from 1 to 5: ");
+                System.out.println("Invalid input. Enter rating from 1 to 5: ");
             }
             rating = console.nextInt();
-            Log.d("Enter special name for your bagel: ");
+            System.out.println("Enter special name for your bagel: ");
             name = console.next();
             favArray.add(new Favorite(bagelOfChoice, creamCheeseOfChoice, rating, name));
         }
 
-        Log.d("\nWell, I hope your bagel isn't as cold as your heart or as gross as your poop.\n");
+        System.out.println("\nWell, I hope your bagel isn't as cold as your heart or as gross as your poop.\n");
 
     }
 }
