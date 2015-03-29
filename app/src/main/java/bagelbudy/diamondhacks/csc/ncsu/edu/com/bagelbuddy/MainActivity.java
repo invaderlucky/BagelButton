@@ -1,11 +1,14 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import bagelbudy2.diamondhacks.csc.ncsu.edu.com.bagelbuddy.R;
@@ -15,15 +18,12 @@ public class MainActivity extends ActionBarActivity {
 
     private static BagelBuddy app = new BagelBuddy();
 
-    Button b1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button b = (Button) findViewById(R.id.myButton);
-
         b.setOnClickListener(
             new Button.OnClickListener() {
                 public void onClick(View v) {
@@ -36,8 +36,40 @@ public class MainActivity extends ActionBarActivity {
     public void showBagel(View view) {
         setContentView(R.layout.activity_second);
         TextView text = (TextView) findViewById(R.id.textViewBagel);
-        text.setText(app.printOutput());
+        String output = app.printOutput();
+        text.setText(output);
         //System.out.println(app.printOutput());
+        ImageView image = (ImageView)findViewById(R.id.imageView);
+        if(output.contains("Asiago Parmesan")) { image.setImageResource(R.mipmap.asiagoparm); }
+        else if(output.contains("Cinnamon Sugar")) { image.setImageResource(R.mipmap.cinnamonsugar); }
+        else if(output.contains("Garlic")) { image.setImageResource(R.mipmap.garlic); }
+        else if(output.contains("Onion")) { image.setImageResource(R.mipmap.onion); }
+        else if(output.contains("Poppy")) { image.setImageResource(R.mipmap.poppy); }
+        else if(output.contains("Rosemary Olive Oil")) { image.setImageResource(R.mipmap.roseoliveoil); }
+        else if(output.contains("Salt")) { image.setImageResource(R.mipmap.salt); }
+        else if(output.contains("Sesame")) { image.setImageResource(R.mipmap.sesame); }
+        else if(output.contains("Whole Wheat")) { image.setImageResource(R.mipmap.wholewheat); }
+        Button b = (Button) findViewById(R.id.buttonNo);
+        b.setOnClickListener(
+            new Button.OnClickListener() {
+                public void onClick(View v) {
+                    showBagel(v);
+                }
+            }
+        );
+
+        b = (Button) findViewById(R.id.buttonYes);
+        b.setOnClickListener(
+            new Button.OnClickListener() {
+                public void onClick(View v) {
+                    showRate(v);
+                }
+            }
+        );
+    }
+
+    public void showRate(View view) {
+       // setContentView(R.layout.activity_third);
     }
 
     @Override
