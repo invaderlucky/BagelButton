@@ -17,17 +17,14 @@
             android:layout_width="225dp"
             android:layout_height="76dp"
             android:text="Get a bagel!"
-            android:id="@+id/button"
+            android:id="@+id/myButton"
             android:layout_gravity="center_horizontal|bottom"
             android:background="#ff3ed0ff"
             android:backgroundTintMode="src_over"
-            android:capitalize="sentences"
-            android:enabled="false"
             android:textColor="#ff050331"
             android:textSize="30sp"
-            android:clickable="true"
-            android:onClick="showBagel"
-            android:elegantTextHeight="false" />
+            android:elegantTextHeight="false"
+            android:onClick="showBagel" />
 
         <TextView
             android:layout_width="208dp"

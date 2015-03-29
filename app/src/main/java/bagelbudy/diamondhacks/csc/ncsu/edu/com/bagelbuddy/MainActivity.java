@@ -16,13 +16,26 @@ public class MainActivity extends ActionBarActivity {
 
     private static BagelBuddy app = new BagelBuddy();
 
+    Button b1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button b = (Button) findViewById(R.id.myButton);
+
+        b.setOnClickListener(
+            new Button.OnClickListener() {
+                public void onClick(View v) {
+                    showBagel(v);
+                }
+            }
+        );
     }
 
-    public void showBagel() {
+    public void showBagel(View view) {
+        // add BagelBuddy stuff things
         setContentView(R.layout.activity_second);
     }
 
