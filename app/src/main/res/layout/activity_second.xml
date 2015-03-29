@@ -58,7 +58,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Are you happy with this bagel?"
             android:id="@+id/textViewQuestion"
-            android:layout_gravity="center_horizontal|bottom"
+            android:layout_gravity="bottom|center"
             android:textAlignment="center"
             android:textColor="#ff00ebff"
             android:textSize="35dp"
