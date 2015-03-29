@@ -60,6 +60,10 @@ public class BagelBuddy {
         return currentBagel;
     }
 
+    public String getCurrentCreamCheese() {
+        return currentCreamCheese;
+    }
+
     public boolean addToFavorites(int rating, String name) {
         Favorite fav = new Favorite(currentBagel, currentCreamCheese, rating, name);
         for (int i = 0; i < favorites.size(); i++) {
@@ -74,7 +78,7 @@ public class BagelBuddy {
     }
 
     public boolean addToDislikeList() {
-        Favorite fav = new Favorite(currentBagel, currentCreamCheese, 0, "");
+        Favorite fav = new Favorite(currentBagel, currentCreamCheese, 0, getCurrentBagel() + " and " + getCurrentCreamCheese());
         for (int i = 0; i < dislikeList.size(); i++) {
             if (fav.getBagel().equals(dislikeList.get(i).getBagel()) &&
                     fav.getCreamCheese().equals(dislikeList.get(i).getCreamCheese())) {
