@@ -16,11 +16,12 @@
 
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="442dp"
+            android:layout_height="476dp"
             android:id="@+id/listView"
             android:textAlignment="center"
             android:textColor="#ff00ebff"
-            android:layout_gravity="center_horizontal|bottom" />
+            android:layout_gravity="center_horizontal|bottom"
+            android:fastScrollEnabled="true" />
 
         <TextView
             android:layout_width="208dp"
