@@ -39,7 +39,8 @@
             android:textSize="30sp"
             android:textColor="#ff050331"
             android:background="#ff3ed0ff"
-            android:gravity="center" />
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
 
         <RatingBar
             android:layout_width="wrap_content"
