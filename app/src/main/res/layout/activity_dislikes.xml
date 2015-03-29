@@ -21,7 +21,8 @@
             android:textAlignment="center"
             android:textColor="#ff00ebff"
             android:layout_gravity="center_horizontal|bottom"
-            android:fastScrollEnabled="true" />
+            android:fastScrollEnabled="true"
+            android:background="#ff6adbff" />
 
         <TextView
             android:layout_width="208dp"
