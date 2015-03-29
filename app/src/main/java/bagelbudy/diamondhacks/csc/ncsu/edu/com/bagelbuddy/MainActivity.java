@@ -55,6 +55,7 @@ public class MainActivity extends ActionBarActivity {
         else if(output.contains("Pumpernickel")) { image.setImageResource(R.mipmap.pumpernickel); }
         else if(output.contains("Cinnamon Raisin")) { image.setImageResource(R.mipmap.cinnamonraison); }
         else if(output.contains("Everything")) { image.setImageResource(R.mipmap.everything); }
+        else if(output.contains("Sundried Tomato")) { image.setImageResource(R.mipmap.sundriedtomato); }
         Button b = (Button) findViewById(R.id.buttonNo);
         b.setOnClickListener(
             new Button.OnClickListener() {
