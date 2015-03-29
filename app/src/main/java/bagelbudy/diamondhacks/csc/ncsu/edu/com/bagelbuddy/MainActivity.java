@@ -1,7 +1,5 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
     public void showBagel(View view) {
         setContentView(R.layout.activity_second);
         TextView text = (TextView) findViewById(R.id.textViewBagel);
-        String output = app.printOutput();
+        String output = app.printResult();
         text.setText(output);
         //System.out.println(app.printOutput());
         ImageView image = (ImageView)findViewById(R.id.imageView);
@@ -49,10 +47,10 @@ public class MainActivity extends ActionBarActivity {
         else if(output.contains("Salt")) { image.setImageResource(R.mipmap.salt); }
         else if(output.contains("Sesame")) { image.setImageResource(R.mipmap.sesame); }
         else if(output.contains("Whole Wheat")) { image.setImageResource(R.mipmap.wholewheat); }
+        else if(output.contains("Pumpernickel")) { image.setImageResource(R.mipmap.pumpernickel); }
         else if(output.contains("Plain")) { image.setImageResource(R.mipmap.plain); }
         else if(output.contains("Honey Grain")) { image.setImageResource(R.mipmap.honeygrain); }
         else if(output.contains("Blueberry")) { image.setImageResource(R.mipmap.blueberry); }
-        else if(output.contains("Pumpernickel")) { image.setImageResource(R.mipmap.pumpernickel); }
         else if(output.contains("Cinnamon Raisin")) { image.setImageResource(R.mipmap.cinnamonraison); }
         else if(output.contains("Everything")) { image.setImageResource(R.mipmap.everything); }
         Button b = (Button) findViewById(R.id.buttonNo);

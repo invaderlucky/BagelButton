@@ -10,7 +10,7 @@ public class BagelBuddy {
     public static final int NO_OF_CREAM_CHEESE = 10;
     public static final int NO_OF_COMMENTS = 4;
 
-    public static String printOutput() {
+    public static String printResult() {
         String[] bagelList = {"Asiago Parmesan", "Cinnamon Sugar", "Garlic",
                 "Onion", "Poppy", "Rosemary Olive Oil", "Sesame",
                 "Sundried Tomato", "Blueberry", "Cinnamon Raisin",
@@ -48,4 +48,6 @@ public class BagelBuddy {
                 return "You shouldn't be here!\n";
         }
     }
+
+
 }
