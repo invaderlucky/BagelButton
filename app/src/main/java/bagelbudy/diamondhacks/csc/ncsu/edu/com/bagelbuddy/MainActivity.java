@@ -1,6 +1,7 @@
 package bagelbudy.diamondhacks.csc.ncsu.edu.com.bagelbuddy;
 
 import android.media.Rating;
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,8 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import bagelbudy2.diamondhacks.csc.ncsu.edu.com.bagelbuddy.R;
 
@@ -87,7 +92,7 @@ public class MainActivity extends ActionBarActivity {
         );
     }
 
-    public void showRate(View view) {
+    public void showRate(View v) {
         // move to next screen
         setContentView(R.layout.activity_third);
 
@@ -118,6 +123,34 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    public void showFavorites(View v) {
+        // move to favourites list screen
+        setContentView(R.layout.activity_favorites);
+
+        ArrayList<String> data = app.get
+
+        /*
+        // For the cursor adapter, specify which columns go into which views
+        String[] fromColumns = {ContactsContract.Data.DISPLAY_NAME};
+        int[] toViews = {android.R.id.text1}; // The TextView in simple_list_item_1
+
+        // Create an empty adapter we will use to display the loaded data.
+        // We pass null for the cursor, then update it in onLoadFinished()
+        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this,
+                android.R.layout.simple_list_item_1, null,
+                fromColumns, toViews, 0);
+        setListAdapter(mAdapter);
+
+        // Prepare the loader.  Either re-connect with an existing one,
+        // or start a new one.
+        getLoaderManager().initLoader(0, null, this);*/
+
+    }
+
+    public void showDislikes(View v) {
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -131,12 +164,30 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        Button b;
+        switch (id) {
+            case R.id.action_favorites:
+                b = (Button) findViewById(R.id.action_favorites);
+                b.setOnClickListener(
+                        new Button.OnClickListener() {
+                            public void onClick(View v) {
+                                showFavorites(v);
+                            }
+                        }
+                );
+                return true;
+            case R.id.action_dislike:
+                b = (Button) findViewById(R.id.action_dislike);
+                b.setOnClickListener(
+                        new Button.OnClickListener() {
+                            public void onClick(View v) {
+                                showDislikes(v);
+                            }
+                        }
+                );
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
